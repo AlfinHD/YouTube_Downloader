@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Downloader</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>YouTube Downloader</h1>
+        <h2>By: Alpin</h2>
+        <form action="/download" method="POST">
+            <input type="text" name="url" placeholder="Masukkan URL video..." required>
+            <select name="quality">
+                <option value="high">Kualitas Tinggi</option>
+                <option value="low">Kualitas Rendah</option>
+            </select>
+            <button type="submit">Download</button>
+        </form>
+    </div>
+    <script>
+        particlesJS.load('particles-js', 'https://cdn.jsdelivr.net/gh/VincentGarreau/particles.js/demo/particles.json');
+    </script>
+</body>
+</html>
